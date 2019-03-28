@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="no">
+  <head>
+    <meta charset="UTF-8">
+    <title>NFD13</title>
+    <link rel="stylesheet" type="text/css" href="nfd13.css">
+    <script type="text/javascript" src="nfd13.js"></script>
+  </head>
+
+  <body onload="onDocumentLoaded()">
+    <div id="title"><h1>Neste fredag den 13ᵈᵉ</h1></div>
+    <div id="content">
+      <form>
+        <label for="date-choice">Velg startdato: </label>
+        <input
+          type="date" name="must-have-a-name" id="date-choice" value="2019-04-01"
+          onchange="onDateChoice();">
+      </form>
+      <p id="result" style="display:none">
+        <span id="n-days">ET ANTALL</span> dager etter
+        <span id="start-date">EN DATO</span>
+        <span id="year">ET ÅR</span> kommer
+        <span id="friday-13-date">EN FREDAG DEN 13.</span>&hellip; 😮
+      </p>
+    </div>
+  </body>
+</html>
