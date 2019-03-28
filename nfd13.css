@@ -1,0 +1,8 @@
+body { padding: 0; margin: 0; background: lightyellow;}
+h1 { padding: 0; margin: 0; }
+div#title {
+  writing-mode: vertical-lr; transform: rotate(-180deg); text-align: right;
+  padding-bottom: 0.2em; padding-left: 0; margin-left: 0; margin-right: 0.2em;
+  float: left; height: 100%; background-color: bisque;
+  color:darkslateblue; white-space: nowrap; }
+div#content { padding-top: 0.5em;}
