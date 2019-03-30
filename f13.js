@@ -29,17 +29,17 @@ var norwegian =
 function displayResultFor(startDate) {
     const fridayNumber = 5;
 
-    $('start-date').innerText = norwegian.dateString(startDate);
-    $('year').innerText = yearOf(startDate).toString();
-
     let date = cloneOfDate(startDate);
     let nDays = 0;
     do {
         setDayOf(date, dayOf(date) + 1);
         ++nDays;
     } while (weekdayOf(date) != fridayNumber || dayOf(date) != 13);
-    $('friday-13-date').innerText = 'fredag den ' + norwegian.dateString(date);
+
     $('n-days').innerText = nDays.toString();
+    $('start-date').innerText = norwegian.dateString(startDate);
+    $('year').innerText = yearOf(startDate).toString();
+    $('friday-13-date').innerText = 'fredag den ' + norwegian.dateString(date);
     $('result').style.display = 'block';
 }
 
