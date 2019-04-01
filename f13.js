@@ -1,10 +1,13 @@
 function $(x)               { return document.getElementById(x); }
+
+// 1-based date item values:
 function yearOf(date)       { return 1900 + date.getYear(); }
 function monthOf(date)      { return 1 + date.getMonth(); }
-function dayOf(date)        { return date.getDate(); }
-function weekdayOf(date)    { return date.getDay(); }               // 0 = Sunday.
+function dayOf(date)        { return 0 + date.getDate(); }
+function weekdayOf(date)    { return 1 + date.getDay(); }   // 1 = Sunday.
 function cloneOfDate(date)  { return new Date(date.getTime()); }
 function setDayOf(date, d)  { date.setDate(d); }
+
 function asNDigits(x, n)    { return x.toString().padStart(n, '0'); }
 
 function isoStringForLocalDate(date) {
@@ -27,7 +30,7 @@ var norwegian =
 };
 
 function displayResultFor(startDate) {
-    const fridayNumber = 5;
+    const fridayNumber = 6;
 
     let date = cloneOfDate(startDate);
     let nDays = 0;
